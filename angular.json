@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "banking": {
+    "banking-project-work": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "banking:build"
+            "browserTarget": "banking-project-work:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "banking:build:production"
+              "browserTarget": "banking-project-work:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "banking:build"
+            "browserTarget": "banking-project-work:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "banking:serve"
+            "devServerTarget": "banking-project-work:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "banking:serve:production"
+              "devServerTarget": "banking-project-work:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "banking"
+  "defaultProject": "banking-project-work"
 }
