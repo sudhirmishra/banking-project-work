@@ -35,6 +35,7 @@ export class HistoryComponent implements OnInit {
     if (lastBalance + element.amount == element.balance){
       this.transactions.valid.push(element)
       this.transactions.invalid.splice(idx,1)
+      this.error = ''
     } else {
       this.error = "Can't accept this record"
     }
