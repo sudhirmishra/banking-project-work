@@ -1,0 +1,41 @@
+.layout {  
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+nav {
+    border-bottom: 1px solid black;
+    background-color: antiquewhite;
+    padding: 0.8rem;
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+}
+
+.crumbs ol {
+    list-style-type: none;
+}
+
+.crumb {
+    display: inline-block;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    background-color: aquamarine;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+.crumb > a {
+    text-decoration: none;
+}
+
+.crumb:hover {
+    background-color: white;
+    color: rebeccapurple;
+}
+
+.title{
+    background-color: aliceblue;
+    padding: 0.5rem;
+
+    margin-left: -0.4rem;
+    margin-right: -0.4rem;
+}
