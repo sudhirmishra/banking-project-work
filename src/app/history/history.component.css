@@ -68,7 +68,7 @@ only screen and (max-width: 760px),
 	/*
 	Label the data
 	*/
-	td:nth-of-type(1):before { content: "<strong>ID</strong>"; }
+	td:nth-of-type(1):before { content: "ID"; }
 	td:nth-of-type(2):before { content: "Date"; }
 	td:nth-of-type(3):before { content: "Transaction"; }
 	td:nth-of-type(4):before { content: "Description"; }
