@@ -39,3 +39,6 @@ nav {
     margin-left: -0.4rem;
     margin-right: -0.4rem;
 }
+.crumb-active{
+    background-color: white;
+}

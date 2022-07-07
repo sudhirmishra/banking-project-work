@@ -5,12 +5,12 @@
         </div>
         <nav class="crumbs">
             <ol>
-                <li class="crumb">
+                <li [ngClass]="{'crumb-active': activeLink === '/transactions'}" class="crumb">
                     <a routerLink="/transactions" routerLinkActive="active" ariaCurrentWhenActive="page">
                         Past Transactions
                     </a>
                 </li>
-                <li class="crumb">
+                <li [ngClass]="{'crumb-active': activeLink === '/dashboard'}" class="crumb">
                     <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">
                         Dashboard
                     </a>
