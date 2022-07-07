@@ -14,7 +14,7 @@
             <th>Balance</th>
         </thead>
         <tbody>
-            <tr *ngFor="let item of transactions.valid  | removeDuplicate | sortRecords ">
+            <tr *ngFor="let item of transactions.valid ">
                 <td>{{item.activity_id}}</td>
                 <td>{{item.date | date: 'shortDate'}}</td>
                 <td>{{item.type}}</td>
@@ -28,6 +28,8 @@
         <h3 class="error">
             Transactions with error
         </h3>
+        <span>Accept the transactions in the sequence</span>
+        <p class="error">{{error}}</p>
         <table *ngIf="transactions && transactions.invalid.length" class="transactions-table">
             <thead>
                 <th>ID</th>
@@ -36,15 +38,17 @@
                 <th>Desc</th>
                 <th>Amount</th>
                 <th>Balance</th>
+                <th>Action</th>
             </thead>
             <tbody>
-                <tr *ngFor="let item of transactions.invalid  | removeDuplicate | sortRecords ">
+                <tr *ngFor="let item of transactions.invalid; let idx = index">
                     <td>{{item.activity_id}}</td>
                     <td>{{item.date | date: 'shortDate'}}</td>
                     <td>{{item.type}}</td>
                     <td>{{item | txDescription}}</td>
                     <td>{{item.amount}}</td>
                     <td>{{item.balance}}</td>
+                    <th><button (click)="accept_item(idx)">Accept</button></th>
                 </tr>
             </tbody>
         </table>
