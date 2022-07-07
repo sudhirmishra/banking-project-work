@@ -1,1 +1,46 @@
-<p>history works!</p>
+<div class="" id="transactions-content">
+    <h3>Past Transactions</h3>
+    <ul class="files">
+        <li *ngFor="let f of files" [ngClass]="{'file-active': active_file === f}" (click)=change_source(f)>{{f | fileName}}</li>
+    </ul>
+    <table *ngIf="transactions && transactions.valid.length" class="transactions-table">
+        <thead>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Desc</th>
+            <th>Amount</th>
+            <th>Balance</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of transactions.valid  | removeDuplicate | sortRecords ">
+                <td>{{item.activity_id}}</td>
+                <td>{{item.date | date: 'shortDate'}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item | txDescription}} </td>
+                <td>{{item.amount}}</td>
+                <td>{{item.balance}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <table *ngIf="transactions && transactions.invalid.length" class="transactions-table">
+        <thead>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Transaction</th>
+            <th>Desc</th>
+            <th>Amount</th>
+            <th>Balance</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of transactions.invalid  | removeDuplicate | sortRecords ">
+                <td>{{item.activity_id}}</td>
+                <td>{{item.date | date: 'shortDate'}}</td>
+                <td>{{item.type}}</td>
+                <td>{{item | txDescription}} </td>
+                <td>{{item.amount}}</td>
+                <td>{{item.balance}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

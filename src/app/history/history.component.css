@@ -1,0 +1,24 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ccc;
+}
+td, th{
+    padding: 0.5rem;
+    text-align: left;
+}
+.files{
+    list-style: none;
+}
+.files > li{
+    display: inline;
+    padding-left: 0.6rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.file-active{
+    color:blue
+}
