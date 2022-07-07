@@ -5,7 +5,7 @@
         </div>
         <nav class="crumbs">
             <ol>
-                <li [ngClass]="{'crumb-active': activeLink === '/transactions'}" class="crumb">
+                <li [ngClass]="{'crumb-active': activeLink === '/transactions' || activeLink === '/' }" class="crumb">
                     <a routerLink="/transactions" routerLinkActive="active" ariaCurrentWhenActive="page">
                         Past Transactions
                     </a>

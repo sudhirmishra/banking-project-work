@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.router.events.subscribe((res) => {
       this.activeLink = this.router.url
+      console.log(this.router.url)
   });
   }
 }
